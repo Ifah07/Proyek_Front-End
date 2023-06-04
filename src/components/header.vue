@@ -9,7 +9,7 @@
       </div>
       <div class="flex space-x-3 items-center justify-center px-3">
         <div class="text-md">Admin</div>
-        <Avatar icon="pi pi-user" class="mr-2" style="background-color:#9c27b0; color: #ffffff" shape="circle" @click="toggle" aria-haspopup="true" aria-controls="overlay_menu" />
+        <Avatar icon="pi pi-user" class="mr-2" style="background-color:#00685f; color: #ffffff" shape="circle" @click="toggle" aria-haspopup="true" aria-controls="overlay_menu" />
         <Menu id="overlay_menu" ref="menu" :model="items" :popup="true" />
 
       </div>

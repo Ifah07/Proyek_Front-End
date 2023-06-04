@@ -8,9 +8,9 @@
       <div class="menu-man text-left px-2 whitespace-nowrap ">
         <div class="profile flex justify-center items-center text-center p-5 ">
           <div class="text-center  text-white" v-show="dataOpenSideBar">
-            <img src="https://i.pinimg.com/originals/2b/d4/06/2bd4068c1750164c7b5def9d531c2625.png" class="p-1 w-24 h-24 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 mb-4" alt="Avatar" />
+            <img src="https://i.pinimg.com/originals/2b/d4/06/2bd4068c1750164c7b5def9d531c2625.png" class="p-1 w-24 h-24 rounded-full ring-2 ring-blue-300 dark:ring-blue-500 mb-4" alt="Avatar" />
             <h5 class="text-xl font-medium leading-tight mb-2"> Nuriyah Syarifah </h5>
-            <p class="text-gray-500">Admin </p>
+            <p class="text-white-500">Admin </p>
           </div>
         </div>
         <div class="   py-3 rounded-sm cursor-pointer text-gray-300 hover:text-white">
