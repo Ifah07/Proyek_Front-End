@@ -1,16 +1,15 @@
 <template>
-  <div class="px-5" style="background-image: url('https://i.pinimg.com/originals/da/88/73/da887317572ef2630ce3ee6d5c81a009.jpg');">
-    <!-- Konten dashboard lainnya -->
-  </div>
-    <div class="font-bold text-4xl py-3 "> Data Bansos </div>
+  <div class="px-5">
+    <div class="font-bold text-4xl py-3">Data Pengguna</div>
 
     <div class="py-5">
       <table class="border-collapse border-2 w-full">
         <thead>
           <tr>
-            <th class="border-2 p-3">NISN</th>
+            <th class="border-2 p-3">NO</th>
+            <th class="border-2 p-3">Tanggal</th>
             <th class="border-2 p-3">Nama</th>
-            <th class="border-2 p-3">Kelas</th>
+            <th class="border-2 p-3">No.Wa</th>
             <th class="border-2 p-3">Actions</th>
           </tr>
         </thead>
@@ -19,11 +18,12 @@
             <td class="border-2 p-3">{{ data.id }}</td>
             <td class="border-2 p-3">{{ data.name }}</td>
             <td class="border-2 p-3">{{ data.description }}</td>
+            <td class="border-2 p-3"></td>
             <td class="border-2 p-3">
-              <button class="px-4 py-2 border rounded bg-blue-500 text-white hover:bg-blue-400"
-                @click="edit(data.id)">Edit</button>
-              <button class="px-4 py-2 border rounded bg-red-500 text-white hover:bg-red-400"
-                @click="destory(data.id)">Delete</button>
+              <button class="px-4 py-2 border rounded bg-blue-500 text-white hover:bg-blue-900"
+                @click="edit(data)">Edit</button>
+              <button class="px-4 py-2 border rounded bg-red-500 text-white hover:bg-red-900"
+                @click="destroy(data.id)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -35,57 +35,9 @@
       <button class="px-4 py-2 border rounded bg-blue-500 text-white hover:bg-blue-400" @click="modelUpdate = true">Update
         Post</button>
     </div>
-    <!-- Pop up modal add new -->
-    <div class="flex w-full h-full justify-center item-center" v-show="modelAdd">
-      <!-- Background -->
-      <div class="w-screen h-full bg-gray-900 bg-opacity-80 top-0 fixed sticky-0 left-0" @click="(modelAdd = false)">
-      </div>
-      <!-- Form -->
-      <div class="   flex justify-center items-center top-[30%] fixed sticky-0 left-[40%]">
-        <div class=" md:w-auto  relative flex flex-col justify-center items-center bg-white  p-8">
-          <div class="my-5">
-            <h1 role="main" class="text-xl font-semibold text-center text-gray-800">Add new post</h1>
-          </div>
-          <div class="mt-2 flex flex-col space-y-2">
-            <input type="text"
-              class="py-2 px-1 border-2 w-full text-gray-800   text-base leading-4 text-left mt-2 focus:outline-2 "
-              placeholder="Title" v-model="data.name">
-            <textarea
-              class="border-2 py-2 px-1 w-full text-gray-800   text-base leading-4 text-left mt-2 focus:outline-2 "
-              rows="8" cols="30" placeholder="Description" v-model="data.description" />
-          </div>
-          <button class="mt-2 px-4 py-2 border rounded bg-gray-500 text-white hover:bg-gray-400" @click="addnew">Create
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Pop up modal add new -->
 
     <!-- Pop up model Update  -->
-    <div class="flex w-full h-full justify-center item-center" v-show="modelUpdate">
-      <!-- Background -->
-      <div class="w-screen h-full bg-gray-900 bg-opacity-80 top-0 fixed sticky-0 left-0" @click="(modelUpdate = false)">
-      </div>
-      <!-- Form -->
-      <div class="   flex justify-center items-center top-[30%] fixed sticky-0 left-[40%]">
-        <div class=" md:w-auto  relative flex flex-col justify-center items-center bg-white  p-8">
-          <div class="my-5">
-            <h1 role="main" class="text-xl font-semibold text-center text-gray-800">Update post</h1>
-          </div>
-          <div class="mt-2 flex flex-col space-y-2">
-            <input type="text"
-              class="py-2 px-1 border-2 w-full text-gray-800   text-base leading-4 text-left mt-2 focus:outline-2 "
-              placeholder="Title" v-model="data.name">
-            <textarea
-              class="border-2 py-2 px-1 w-full text-gray-800   text-base leading-4 text-left mt-2 focus:outline-2 "
-              rows="8" cols="30" placeholder="Description" v-model="data.description" />
-          </div>
-          <button class="mt-2 px-4 py-2 border rounded bg-gray-500 text-white hover:bg-gray-400"
-            @click="updatePost">Update </button>
-        </div>
-      </div>
-    </div>
-    <!-- Pop up model Update  -->
+  </div>
 </template>
 
 
